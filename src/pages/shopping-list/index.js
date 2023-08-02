@@ -9,7 +9,9 @@ const index = () => {
   const dispatch = useDispatch();
 
   useEffect(()=> {
-    localStorage.setItem("shoppingList", JSON.stringify([]))
+    if(JSON.parse(localStorage.getItem("shoppingList")) == null) {
+      localStorage.setItem("shoppingList", JSON.stringify([]))
+    }
     dispatch(updateList())
   }, [])
 
