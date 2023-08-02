@@ -9,6 +9,7 @@ const index = () => {
   const dispatch = useDispatch();
 
   useEffect(()=> {
+    localStorage.setItem("shoppingList", JSON.stringify([]))
     dispatch(updateList())
   }, [])
 
