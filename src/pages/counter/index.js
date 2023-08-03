@@ -29,10 +29,10 @@ const index = () => {
         </button>
       </div>
 
-      <div className=" h-9 flex gap-5">
-        <input value={numberInput} onChange={(e)=> setNumberInput(e.target.value)} type="number" className=" border border-gray-600 rounded h-full px-4 text-lg font-semibold" />
+      <div className=" md:h-9 flex flex-col md:flex-row gap-2 md:gap-5">
+        <input value={numberInput} onChange={(e)=> setNumberInput(e.target.value)} type="number" className=" border border-gray-600 rounded h-9 md:h-full px-4 text-lg font-semibold" />
         <button
-          className=" h-full flex items-center justify-center border border-gray-600 rounded px-4 py-1 text-xl bg-violet-600 text-white hover:bg-violet-800"
+          className=" h-9 md:h-full flex items-center justify-center border border-gray-600 rounded px-4 py-1 text-xl bg-violet-600 text-white hover:bg-violet-800"
           onClick={() => dispatch(customValue(+numberInput))}
         >
           sayıyı ayarla
